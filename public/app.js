@@ -137,35 +137,35 @@ uiModules
     };
 
     /////////////////////////////////////////////////////////////////////
-    // $scope.loadTenants((tenants) => {
-    //     for (let i in tenants) {
-    //         let tenantId = tenants[i];
-    //         $scope.tenants.push({
-    //             tenant: tenantId,
-    //             dashboards: [
-    //                 {tenant:"tenant", title: "Dash 3 title", id: "asdasdasdasdasd"},
-    //                 {tenant:"tenant", title: "Dash 2 title", id: "asdasdasdasdasd"},
-    //                 {tenant:"tenant", title: "Dash 1 title", id: "asdasdasdasdasd"},
-    //             ]
-    //         });
-    //     }
-    // });
-
-    $scope.loadTenantsApi((tenants) => {
+    $scope.loadTenants((tenants) => {
         for (let i in tenants) {
-            $scope.loadTenantDashboards(tenants[i], function(tenantId, dashboards) {
-                if (dashboards.length > 0) {
-                    let tenant = {
-                        tenant: tenantId,
-                        dashboards: dashboards,
-                    };
-
-                    $scope.tenants.push(tenant);
-                    console.log(tenant);
-                }
+            let tenantId = tenants[i];
+            $scope.tenants.push({
+                tenant: tenantId,
+                dashboards: [
+                    {tenant:"tenant", title: "Dash 3 title", id: "asdasdasdasdasd"},
+                    {tenant:"tenant", title: "Dash 2 title", id: "asdasdasdasdasd"},
+                    {tenant:"tenant", title: "Dash 1 title", id: "asdasdasdasdasd"},
+                ]
             });
         }
     });
+
+    // $scope.loadTenantsApi((tenants) => {
+    //     for (let i in tenants) {
+    //         $scope.loadTenantDashboards(tenants[i], function(tenantId, dashboards) {
+    //             if (dashboards.length > 0) {
+    //                 let tenant = {
+    //                     tenant: tenantId,
+    //                     dashboards: dashboards,
+    //                 };
+    //
+    //                 $scope.tenants.push(tenant);
+    //                 console.log(tenant);
+    //             }
+    //         });
+    //     }
+    // });
 });
 
 
