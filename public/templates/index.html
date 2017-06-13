@@ -1,0 +1,43 @@
+<kbn-top-nav name="anticheat">
+    <div data-transclude-slots>
+        <div data-transclude-slot="topLeftCorner" class="kuiLocalTitle">
+            External dashboards
+        </div>
+    </div>
+</kbn-top-nav>
+
+<div class="container app-container" ng-controller="indexController">
+    <div class="row" ng-show="hasAccess">
+        <div class="col-12-sm">
+            <h1>Current tenant: {{ currentTenant }}</h1>
+            <h2>All available dashboards:</h2>
+
+            <!-- table-hover-->
+            <table class="table table-bordered" id="table" ng-repeat="tenant in tenants | orderBy:['tenant']">
+                <thead>
+                    <tr>
+                        <th>{{ tenant.tenant }}</th>
+                    </tr>
+                </thead>
+
+                <tbody>
+                    <tr ng-repeat="dashboard in tenant.dashboards | orderBy:['title']">
+                        <td>
+                            <a href="{{ makeDashboardLink(dashboard.id) }}" ng-click="redirectDashboard(dashboard.tenant, dashboard.id)">
+                                {{ dashboard.title }}
+                            </a>
+                        </td>
+                    </tr>
+                </tbody>
+            </table>
+
+        </div>
+    </div>
+
+    <div class="row" ng-hide="hasAccess">
+        <div class="col-12-sm">
+            <h1 style="text-align: center">You do not have access to read this page</h1>
+        </div>
+    </div>
+
+</div>
