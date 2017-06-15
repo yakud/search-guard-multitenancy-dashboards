@@ -4,7 +4,7 @@
 
 
 Kibana 5.4.0:
-[Download plugin .zip] (https://raw.githubusercontent.com/Yakud/search-guard-multitenancy-dashboards/master/release/search-guard-multitenancy-dashboards-5.4.0-1.zip)
+[Download plugin .zip](https://raw.githubusercontent.com/Yakud/search-guard-multitenancy-dashboards/master/release/search-guard-multitenancy-dashboards-5.4.0-1.zip)
 
 <b> How to install:</b>
 
