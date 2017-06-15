@@ -5,7 +5,7 @@ export default function (server) {
   const { callWithInternalUser } = server.plugins.elasticsearch.getCluster('data');
 
   server.route({
-    path: '/api/search-guard-multitenancy-dashboards/dashboards',
+    path: '/api/multitenancy-dashboards/dashboards',
     method: 'GET',
     handler(req, reply) {
       callWithRequest(req, 'search', {

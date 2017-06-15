@@ -8,7 +8,7 @@ export default function (kibana) {
       app: {
         title: 'Dashboards',
         description: 'All tenants dashboard on a single page',
-        main: 'plugins/search-guard-multitenancy-dashboards/app',
+        main: 'plugins/multitenancy-dashboards/app',
         icon: 'plugins/kibana/assets/dashboard.svg',
       }
     },
