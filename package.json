@@ -1,9 +1,9 @@
 {
   "name": "search-guard-multitenancy-dashboards",
-  "version": "5.4.0-1",
+  "version": "5.4.1-1",
   "description": "Search Guard Kibana plugin. All tenants dashboards on a single page.",
   "main": "index.js",
-  "kibana": {"version": "5.4.0"},
+  "kibana": {"version": "5.4.1"},
   "scripts": {
     "lint": "eslint",
     "start": "plugin-helpers start",

@@ -1,6 +1,6 @@
 #!/usr/bin/env bash
 
-VERSION="5.4.0-1"
+VERSION="5.4.1-1"
 PLUGIN_NAME="search-guard-multitenancy-dashboards"
 PLUGIN_ZIP=${PLUGIN_NAME}"-${VERSION}.zip"
 FOLDER="kibana/${PLUGIN_NAME}/"
